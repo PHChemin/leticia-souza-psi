@@ -1,8 +1,50 @@
-# React Landpage Template
+# Letícia Souza · One-page
 
-Esqueleto para landings freelance com **Vite + React + TypeScript + Tailwind CSS v4**, motion (Magic UI / Originkit) e deploy gratuito no **GitHub Pages**.
+One-page institucional da psicóloga clínica **Letícia Souza** (CRP 06/229667): atendimento online para adolescentes, adultos e idosos.
 
-Irmão HTML-only: [github-landpage-template](https://github.com/PHChemin/github-landpage-template).
+- **Endereço:** [www.psicologaleticiasouza.com.br](https://www.psicologaleticiasouza.com.br) (a bio de presença, `links.psicologaleticiasouza.com.br`, é o repo [leticia-souza-psi-bio](https://github.com/PHChemin/leticia-souza-psi-bio))
+- **Identidade:** lavanda, oliva, terracota, baunilha e ameixa; Lora e Poppins (fontes locais via `@fontsource`). Mesma linguagem visual da bio — ver `docs/ART_DIRECTION.md`.
+- Projeto criado a partir do template `react-landpage-template`.
+
+## Pendências
+
+- Textos das nove seções (lista em `docs/PRD.md`).
+- Validar com a cliente a versão alpha (animação do símbolo no hero, faixas de cor, fotos escolhidas).
+- E-mail e link do artigo.
+
+## Onde mexer
+
+| O quê | Onde |
+| --- | --- |
+| Textos (provisórios) | `src/content.ts` |
+| Estrutura das seções | `src/App.tsx` |
+| Links de contato (WhatsApp, Instagram, Lattes) | `src/lib/links.ts` |
+| Cores, fontes e animações | `src/styles/main.css` |
+| Título, descrição e preview de compartilhamento | `index.html` |
+| Imagem de preview (1200×630) | `public/og-image.png` |
+| Favicons | `public/favicon.ico`, `public/favicon.svg`, `public/favicon-32.png`, `public/apple-touch-icon.png` |
+| Símbolo e peças da animação | `public/logo-mark.png`, `public/grow/` |
+| Fotos do ensaio (WebP) | `public/images/` |
+| Direção de arte e feedback da cliente | `docs/ART_DIRECTION.md` |
+
+Caminhos de `public/` no código passam por `asset()` (`src/lib/asset.ts`), que respeita o `base` do Vite.
+
+## Domínio
+
+O endereço definitivo é `https://www.psicologaleticiasouza.com.br`, gravado em `public/CNAME` e copiado para `dist/` no build. No DNS do Registro.br, `www` aponta por CNAME para `phchemin.github.io` e o domínio raiz (sem www) usa os registros A do GitHub Pages, para redirecionar ao www. A bio (`links.`) já tem o CNAME próprio e não entra nessa alteração — ver `docs/DEPLOY.md`.
+
+## Material local (não vai para o git)
+
+`identidade/` guarda as pranchas de identidade visual enviadas pela cliente (`4.png` a `8.png`) e, em `identidade/fotos/`, os originais do ensaio (~9 MB cada). Está no `.gitignore` e fica só na máquina.
+
+As fotos do site ficam em `public/images/` em WebP, até 1600 px. Para gerar de novo a partir dos originais:
+
+```bash
+for f in identidade/fotos/*.JPG; do
+  n=$(basename "$f" .JPG | tr 'A-Z' 'a-z' | tr '_' '-')
+  magick "$f" -auto-orient -resize '1600x1600>' -strip -quality 80 "public/images/$n.webp"
+done
+```
 
 ## Stack
 
@@ -103,4 +145,4 @@ npm run preview   # testa o build localmente
 - `.env` / secrets / API keys
 - `.originkit/` (credenciais/cache do CLI)
 - `node_modules/`, `dist/`
-- Dados reais do cliente (WhatsApp, e-mail) até o fork do projeto — este template usa **placeholders**
+- Material bruto de identidade da cliente (SVG, pranchas) — fica só local

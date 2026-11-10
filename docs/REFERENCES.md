@@ -20,10 +20,17 @@ Ao aprovar um projeto com o cliente, registre aqui. Três linhas bem escritas va
 
 <!-- Adicione abaixo, o mais recente primeiro. -->
 
+### Letícia Souza · Bio — psicologia clínica
+- **Conceito:** um claro de jardim, com o símbolo dela (planta crescendo da raiz) no centro e o contato logo abaixo.
+- **O que funcionou:** o símbolo crescendo no fundo a 17% de opacidade; botões em pílula com onda que sobe no hover; nome grande em Lora com rótulos em Poppins espaçado.
+- **O que não funcionou / mudou:** linhas demais e agitadas davam nervosismo; faixa e linhas na base poluíam; off-white virou branco puro; scroll lateral no celular por causa do fundo.
+- **Reutilizável:** `GrowingMark`, `FlowLines`, `WhatsAppCta`, `LinkButton` em `leticia-souza-psi-bio/src/components/site/`. Repo: https://github.com/PHChemin/leticia-souza-psi-bio
+
 ## Referências externas
 
 Sites de terceiros que servem de régua. Diga **o que** observar em cada um — "site bonito" não ajuda.
 
 | Site | O que observar |
 | --- | --- |
-| | |
+| [Instagram da Maitê Sartori](https://www.instagram.com/maitesartori) | Informação clara, estética acolhedora, cores que conversam (referência da cliente) |
+| [links.psicologaleticiasouza.com.br](https://links.psicologaleticiasouza.com.br) | Bio já entregue: paleta, tipografia, símbolo e botões que a one-page deve manter |
