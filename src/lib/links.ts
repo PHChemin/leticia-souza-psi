@@ -1,47 +1,18 @@
-/** Placeholder contact URLs. Replace before delivery. */
-export const contactEmail = "contato@cliente.com.br"
-
+/** Contatos da one-page. Artigo ainda sem URL — não entra na página. E-mail não informado. */
 export const links = {
   whatsapp:
-    "https://wa.me/5500000000000?text=" +
-    encodeURIComponent("Olá! Vim pelo site e gostaria de mais informações."),
-  instagram: "https://www.instagram.com/SEU_USUARIO",
-  email: `mailto:${contactEmail}`,
-  portfolio: "https://example.com",
+    "https://wa.me/5534992165000?text=" +
+    encodeURIComponent(
+      "Olá, Letícia. Vim pelo seu site e gostaria de conversar sobre atendimento.",
+    ),
+  instagram: "https://www.instagram.com/leticia.souzapsi",
+  lattes: "https://lattes.cnpq.br/1069249404080267",
 } as const
 
 export const nav = [
+  { href: "#sobre", id: "sobre", label: "Sobre mim" },
+  { href: "#abordagem", id: "abordagem", label: "Abordagem" },
   { href: "#servicos", id: "servicos", label: "Serviços" },
-  { href: "#trabalhos", id: "trabalhos", label: "Trabalhos" },
-  { href: "#sobre", id: "sobre", label: "Sobre" },
-  { href: "#contato", id: "contato", label: "Contato" },
-] as const
-
-export const services = [
-  {
-    title: "Serviço principal",
-    text: "Uma frase sobre o que o cliente entrega e para quem.",
-  },
-  {
-    title: "Segundo diferencial",
-    text: "O que muda na prática quando a pessoa escolhe esta marca.",
-  },
-  {
-    title: "Como começar",
-    text: "O próximo passo é uma conversa — sem formulário neste stack.",
-  },
-] as const
-
-export const works = [
-  { title: "Projeto um", tag: "Identidade" },
-  { title: "Projeto dois", tag: "Site" },
-  { title: "Projeto três", tag: "Campanha" },
-  { title: "Projeto quatro", tag: "Fotografia" },
-  { title: "Projeto cinco", tag: "Evento" },
-] as const
-
-export const stats = [
-  { value: 12, label: "anos de ofício" },
-  { value: 80, label: "projetos entregues" },
-  { value: 4, label: "cidades atendidas" },
+  { href: "#online", id: "online", label: "Atendimento" },
+  { href: "#perguntas", id: "perguntas", label: "Perguntas" },
 ] as const
