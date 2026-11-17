@@ -8,7 +8,7 @@ export const hero = {
   phrase:
     "Um espaço seguro de escuta, cuidado e acolhimento. Tratamento para TOC e ansiedade.",
   cta: "Entre em contato!",
-}
+};
 
 export const sobre = {
   title: "Sobre mim",
@@ -21,7 +21,7 @@ export const sobre = {
     { label: "Atuação", value: "Psicologia clínica" },
     { label: "Formato", value: "Atendimento online" },
   ],
-}
+};
 
 export const formacao = {
   title: "Meu itinerário acadêmico-profissional",
@@ -43,20 +43,21 @@ export const formacao = {
       notes: ["Faculdade Iguaçu"],
     },
     {
-      title: "Especialização em Rede de Atenção Psicossocial com Enfoque em Centros de Atenção Psicossocial",
+      title:
+        "Especialização em Rede de Atenção Psicossocial com Enfoque em Centros de Atenção Psicossocial",
       notes: ["Faculdade Iguaçu"],
     },
   ],
-}
+};
 
 export const abordagem = {
   title: "Abordagem",
   quote: "Fenomenologia-existencial",
   paragraphs: [
-    "No meu trabalho, eu me oriento pela Psicologia Fenomenológica-Existencial. Esta abordagem compreende cada pessoa como única, buscando aproximar-se do modo como cada pessoa vivencia suas possibilidades de escolha na existência. É uma abordagem sensível, cuja principal característica se volta em despir-se dos pré-julgamentos sobre o outro.",
-    "A terapia, assim, é um espaço de acolhimento e escuta, onde você pode olhar para suas experiências, compreender seus sentimentos e construir novas significações, respeitando seu próprio tempo e particularidades. Um convite ao experienciar!",
+    "No meu trabalho, eu me oriento pela Psicologia Fenomenológico-Existencial. Esta abordagem compreende cada pessoa como única, buscando aproximar-se do modo como cada sujeito vivencia suas possibilidades de escolha na existência. É uma abordagem sensível, cuja principal característica se volta em despir-se dos pré-julgamentos sobre o outro.",
+    "A terapia, assim, é um espaço de acolhimento e transformação, onde você pode olhar para suas experiências, compreender seus sentimentos e construir novas significações, respeitando seu próprio tempo e particularidades. Um convite ao experienciar!",
   ],
-}
+};
 
 export const servicos = {
   title: "Meus serviços",
@@ -74,7 +75,7 @@ export const servicos = {
       text: "Ofereço palestras e rodas de conversa para públicos de diferentes faixas etárias, versando sobre temas como saúde mental e autocuidado.",
     },
   ],
-}
+};
 
 /** Seção própria, logo depois de Meus serviços. "Para quem é o tratamento" fica de fora por enquanto. */
 export const tratamento = {
@@ -110,7 +111,7 @@ export const tratamento = {
       text: "Rituais realizados internamente, como repetir frases, contar, rezar ou revisar mentalmente acontecimentos.",
     },
   ],
-}
+};
 
 export const paraQuem = {
   title: "Para quem é o atendimento",
@@ -119,7 +120,7 @@ export const paraQuem = {
       name: "Adolescentes",
       color: "var(--color-lavanda)",
       tint: 38,
-      text: "A adolescência é repleta de transformações pessoais e descobertas. É um momento em que surgem novas experiências, questionamentos e desafios relacionados à identidade, à autoestima, às relações e ao lugar que se ocupa no mundo. A psicoterapia é um espaço potente para acolher tais transformações e explorar novas possibilidades do ser. Um espaço em que é possível se permitir questionar e construir seus próprios caminhos.",
+      text: "A adolescência é repleta de transformações pessoais e descobertas. É um momento em que surgem novas vivências, questionamentos e desafios relacionados à identidade, às relações e ao lugar que se ocupa no mundo. A psicoterapia é um espaço potente para acolher tais transformações e explorar novas possibilidades do ser. Um espaço em que é possível se permitir questionar e construir seus próprios caminhos.",
     },
     {
       name: "Adultos",
@@ -131,10 +132,10 @@ export const paraQuem = {
       name: "Idosos",
       color: "var(--color-terracota)",
       tint: 30,
-      text: "O envelhecimento é uma fase da vida marcada por transformações. Ao longo desse período, podem surgir novos desafios relacionados à saúde, às relações familiares e às mudanças na rotina. Também abrem-se novas possibilidades de construção de sentidos. O acompanhamento psicológico busca valorizar sua história, respeitar sua singularidade e reconhecer tudo o que se torna possível para si nesse momento.",
+      text: "O envelhecimento é uma fase da vida marcada por novos desafios. Ao longo desse período, podem surgir novos desafios relacionados à saúde, às relações familiares e às mudanças na rotina. Também abrem-se novas possibilidades de construção de sentidos. O acompanhamento psicológico busca valorizar sua história, respeitar sua singularidade e reconhecer tudo o que se torna possível para si nesse momento.",
     },
   ],
-}
+};
 
 export const como = {
   title: "Como funciona o atendimento",
@@ -152,7 +153,7 @@ export const como = {
       text: "A primeira sessão é um momento em que nos conhecemos e você me conta a sua demanda. Detalhamos também a frequência das sessões. Após a primeira sessão, assinamos o contrato e damos continuidade aos atendimentos.",
     },
   ],
-}
+};
 
 export const online = {
   title: "Atendimento online",
@@ -161,9 +162,12 @@ export const online = {
   facts: [
     { label: "Plataforma", value: "Google Meet" },
     { label: "Duração da sessão", value: "50 minutos a 1 hora" },
-    { label: "O que a pessoa precisa", value: "Internet estável, espaço com privacidade, câmera e microfone." },
+    {
+      label: "O que a pessoa precisa",
+      value: "Internet estável, espaço com privacidade, câmera e microfone.",
+    },
   ],
-}
+};
 
 export const faq = {
   title: "Perguntas frequentes",
@@ -193,10 +197,10 @@ export const faq = {
       a: "Sim, com certeza! Enquanto psicóloga, tenho o dever de garantir o sigilo das sessões e de tudo o que é relatado. O que você conta fica só entre a gente e de forma alguma assumirei uma postura de julgamento, em nenhum momento.",
     },
   ],
-}
+};
 
 export const contato = {
   title: "Contato",
   headline: "Entre em contato!",
   text: "Estou aqui para te ouvir!",
-}
+};
