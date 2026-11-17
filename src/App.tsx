@@ -487,7 +487,7 @@ export default function App() {
             <div>
               <p className="font-display text-xl leading-tight">Letícia Souza</p>
               <p className="mt-1 text-xs tracking-wide text-baunilha/80">
-                Psicóloga clínica · CRP 06/229667 · {year}
+                Psicóloga clínica · CRP 06/229667 · <span suppressHydrationWarning>{year}</span>
               </p>
             </div>
           </div>

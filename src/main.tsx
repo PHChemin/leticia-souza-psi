@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { MotionConfig } from 'motion/react'
 import App from './App'
 import '@fontsource/lora/latin-500.css'
@@ -12,10 +12,15 @@ import './styles/main.css'
 const root = document.getElementById('root')
 if (!root) throw new Error('Root element not found')
 
-createRoot(root).render(
+const app = (
   <StrictMode>
     <MotionConfig reducedMotion="user">
       <App />
     </MotionConfig>
-  </StrictMode>,
+  </StrictMode>
 )
+
+// Build: o HTML já vem pré-renderizado (scripts/prerender.mjs) → hidrata.
+// Dev: #root só tem o marcador → renderiza do zero.
+if (root.firstElementChild) hydrateRoot(root, app)
+else createRoot(root).render(app)
