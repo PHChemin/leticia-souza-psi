@@ -7,9 +7,9 @@ Dados herdados do brief da bio (`leticia-souza-psi-bio`). Campos marcados como "
 - Nome / marca: Letícia Souza (nome completo: Letícia Aparecida Souza Tomaz). Lockup: Letícia Souza, psicóloga clínica. CRP 06/229667.
 - Segmento: psicologia clínica. Atendimento online para adolescentes, adultos e idosos.
 - Cidade / região: não informada. Referência de luz: Shopping Galleria, Campinas.
-- 3 serviços ou produtos: a completar no briefing da one-page. Hoje se sabe só o público (adolescentes, adultos e idosos) e o formato (online).
-- WhatsApp (com DDI, só números): 5534992165000
-- E-mail: não informado
+- 3 serviços ou produtos: atendimento psicológico online; tratamento para TOC (também em seção própria, fora do menu); palestras para escolas, empresas e demais instituições.
+- WhatsApp (com DDI, só números): 5534997364975
+- E-mail: leticia.apst16@gmail.com
 - Instagram / outras redes: https://www.instagram.com/leticia.souzapsi · Currículo Lattes https://lattes.cnpq.br/1069249404080267 · Artigo ainda sem URL
 - Domínio desejado: `www.psicologaleticiasouza.com.br` (esta one-page; o raiz redireciona para www). A bio fica em `links.psicologaleticiasouza.com.br`.
 - Logo / fotos: identidade enviada pela cliente (paleta, logos, tipografia, símbolo) — `identidade/` no repo da bio e `identidade/4.png` a `identidade/8.png` aqui (só local, fora do git). Peças do símbolo recortadas para animação em `public/grow/`. Ensaio profissional com 11 fotos: originais em `identidade/fotos/` (só local, ~9 MB cada) e versões WebP de 1600 px em `public/images/`. Estúdio com fundo bege e luz quente lateral; ela em pé (blusa azul-marinho), sentada em blocos brancos (calça branca) e lendo *Fundamentos de Clínica Fenomenológica* com caneca e livros.
@@ -25,8 +25,8 @@ Dados herdados do brief da bio (`leticia-souza-psi-bio`). Campos marcados como "
 ## Frases
 
 - Headline: Letícia Souza
-- Frase de apoio: Atendimentos online para adolescentes, adultos e idosos. Entre em contato!
-- Sobre: a completar no briefing da one-page.
+- Frase de apoio: Um espaço seguro de escuta, cuidado e acolhimento. Tratamento para TOC e ansiedade.
+- Sobre: texto da cliente em `src/content.ts`. Formação na UFTM, pós no Instituto NUCAFE e na Faculdade Iguaçu, experiência com TOC, transtornos ansiosos e BFRBs.
 - Expressões: psicóloga clínica
 - Tom dos textos (lido do Instagram da Maitê Sartori, que ela usa de referência): explicações técnicas, mas sem ser maçantes nem longas; e sem simplificar demais. Os textos vêm dela; o nosso trabalho é harmonizar e dar qualidade sem perder a voz dela.
 

@@ -15,31 +15,32 @@ One-page institucional da Letícia Souza. A bio de presença (`links.psicologale
 
 ## Objetivo da landing
 
-A pessoa entende quem é a Letícia, como ela atende (online, para adolescentes, adultos e idosos) e sai pelo WhatsApp para marcar.
+A pessoa entende quem é a Letícia, como ela atende (online, para adolescentes, adultos e idosos, com tratamento para TOC e ansiedade) e sai pelo WhatsApp ou pelo e-mail para marcar.
 
 ## Conteúdo obrigatório
 
 - [ ] Nome / marca em destaque (hero)
 - [ ] Headline + frase de apoio
-- [ ] Contato (WhatsApp / Instagram / Lattes)
+- [ ] Contato (WhatsApp / e-mail / Instagram / Lattes)
 - [ ] Sobre mim
 - [ ] Formação
 - [ ] Abordagem
 - [ ] Meus serviços
+- [ ] Tratamento para TOC (seção própria, logo após Meus serviços; não entra no menu — o título é longo e o tema já é um item de serviços)
 - [ ] Para quem é o atendimento
 - [ ] Como funciona o atendimento
 - [ ] Atendimento online
 - [ ] Perguntas frequentes
 - [ ] Contato
 
-Textos de cada seção: a receber da cliente. Tom: explicação técnica, curta e acessível, sem ser maçante nem simplista (referência: Instagram da Maitê Sartori). Revisamos para dar harmonia entre as seções sem trocar a voz dela.
+Textos de cada seção: recebidos da cliente e publicados em `src/content.ts`. Tom: explicação técnica, curta e acessível, sem ser maçante nem simplista (referência: Instagram da Maitê Sartori). A voz dela fica como ela escreveu.
 
 ## Contatos a linkar
 
 | Canal | URL / número |
 | --- | --- |
-| WhatsApp | https://wa.me/5534992165000 |
-| E-mail | não informado |
+| WhatsApp | https://wa.me/5534997364975 |
+| E-mail | mailto:leticia.apst16@gmail.com |
 | Instagram | https://www.instagram.com/leticia.souzapsi |
 | Outro | Currículo Lattes https://lattes.cnpq.br/1069249404080267 |
 | Artigo | ainda sem URL — não publicar link morto |
