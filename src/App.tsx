@@ -3,8 +3,9 @@ import type { CSSProperties } from "react"
 import { GhostLeaf } from "@/components/site/ghost-leaf"
 import { FlowLines } from "@/components/site/flow-lines"
 import { GrowingMark } from "@/components/site/growing-mark"
-import { InstagramIcon, LattesIcon, WhatsAppIcon } from "@/components/site/link-icons"
+import { EmailIcon, InstagramIcon, LattesIcon, WhatsAppIcon } from "@/components/site/link-icons"
 import { LinkButton } from "@/components/site/link-button"
+import { OpenLoop } from "@/components/site/open-loop"
 import { Photo } from "@/components/site/photo"
 import { Reveal } from "@/components/site/reveal"
 import { Body, Section, SectionHead, TextLink } from "@/components/site/section"
@@ -27,11 +28,32 @@ import {
   paraQuem,
   servicos,
   sobre,
+  tratamento,
 } from "@/content"
 import { asset } from "@/lib/asset"
 import { links, nav } from "@/lib/links"
 
+const serviceNumber = (i: number) => String(i + 1).padStart(2, "0")
+
+const manifestacaoColors = ["var(--color-lavanda)", "var(--color-oliva)", "var(--color-terracota)"]
+
 const step = (n: number) => ({ "--step": n }) as CSSProperties
+
+function ServiceRow({ item, n }: { item: (typeof servicos.items)[number]; n: number }) {
+  return (
+    <Reveal
+      as="li"
+      delay={n * 80}
+      className="grid gap-2 border-b border-ameixa/15 py-6 sm:grid-cols-[4.5rem_1fr] sm:gap-x-6 lg:grid-cols-[5rem_1fr_1.2fr] lg:items-baseline lg:gap-10"
+    >
+      <span className="font-display text-3xl leading-none text-terracota italic lg:text-4xl" aria-hidden>
+        {serviceNumber(n)}
+      </span>
+      <h3 className="font-display text-[1.65rem] leading-tight font-medium sm:text-3xl">{item.title}</h3>
+      <p className="text-[1rem] leading-[1.75] sm:col-start-2 lg:col-start-auto">{item.text}</p>
+    </Reveal>
+  )
+}
 
 export default function App() {
   const year = new Date().getFullYear()
@@ -89,7 +111,7 @@ export default function App() {
             {hero.role}
           </p>
           <p
-            className="rise mt-6 max-w-[19rem] font-display text-[1.3rem] leading-snug italic sm:max-w-[24rem] sm:text-2xl lg:mt-9 lg:text-[1.75rem]"
+            className="rise mt-6 max-w-[22rem] font-display text-[1.3rem] leading-snug italic sm:max-w-md sm:text-2xl lg:mt-9 lg:max-w-lg lg:text-[1.65rem]"
             style={step(3)}
           >
             {hero.phrase}
@@ -144,6 +166,9 @@ export default function App() {
                 <TextLink href={links.whatsapp} icon={<WhatsAppIcon />}>
                   WhatsApp
                 </TextLink>
+                <TextLink href={links.email} icon={<EmailIcon />} external={false}>
+                  E-mail
+                </TextLink>
               </Reveal>
             </div>
           </div>
@@ -158,9 +183,6 @@ export default function App() {
             <div className="lg:col-span-5">
               <div className="lg:sticky lg:top-28">
                 <SectionHead title={formacao.title} />
-                <Reveal delay={80} className="mt-4 max-w-sm">
-                  <Body>{formacao.intro}</Body>
-                </Reveal>
                 <Reveal delay={120} className="mt-6">
                   <TextLink href={links.lattes} icon={<LattesIcon />}>
                     {formacao.lattes}
@@ -182,13 +204,14 @@ export default function App() {
                       }
                       aria-hidden
                     />
-                    <p className="text-[0.7rem] font-semibold tracking-[0.3em] text-oliva-funda uppercase">
-                      {item.year}
-                    </p>
-                    <h3 className="mt-1.5 font-display text-2xl leading-tight font-medium sm:text-[1.7rem]">
+                    <h3 className="font-display text-2xl leading-tight font-medium sm:text-[1.7rem]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-[0.98rem] leading-relaxed">{item.note}</p>
+                    {item.notes.map((note) => (
+                      <p key={note} className="mt-2 text-[0.98rem] leading-relaxed">
+                        {note}
+                      </p>
+                    ))}
                   </Reveal>
                 )
               })}
@@ -252,20 +275,53 @@ export default function App() {
           <SectionHead title={servicos.title} />
           <ol className="mt-8 border-t border-ameixa/15">
             {servicos.items.map((item, i) => (
-              <Reveal
-                as="li"
-                key={item.title}
-                delay={i * 80}
-                className="grid gap-2 border-b border-ameixa/15 py-6 sm:grid-cols-[4.5rem_1fr] sm:gap-x-6 lg:grid-cols-[5rem_1fr_1.2fr] lg:items-baseline lg:gap-10"
-              >
-                <span className="font-display text-3xl leading-none text-terracota italic lg:text-4xl" aria-hidden>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="font-display text-[1.65rem] leading-tight font-medium sm:text-3xl">{item.title}</h3>
-                <p className="text-[1rem] leading-[1.75] sm:col-start-2 lg:col-start-auto">{item.text}</p>
-              </Reveal>
+              <ServiceRow key={item.title} item={item} n={i} />
             ))}
           </ol>
+        </Section>
+
+        {/* ——— Tratamento para TOC ——— */}
+        <Section id="tratamento" band="baunilha">
+          <div className="grid gap-6 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-5">
+              <SectionHead title={tratamento.title} />
+              {/* Some quando o título e o texto empilham. */}
+              <Reveal delay={160} className="mt-8 hidden max-w-[15rem] lg:block">
+                <OpenLoop />
+              </Reveal>
+            </div>
+            <Reveal delay={80} className="flex max-w-2xl flex-col gap-4 lg:col-span-7 lg:pt-2">
+              {tratamento.paragraphs.map((p) => (
+                <Body key={p}>{p}</Body>
+              ))}
+            </Reveal>
+          </div>
+          <Reveal className="mt-12 lg:mt-16">
+            <h3 className="font-display text-[1.55rem] leading-tight font-medium sm:text-[1.85rem]">
+              {tratamento.manifestacoesTitle}
+            </h3>
+          </Reveal>
+          {/* Amostras pequenas, de topo arredondado, como os cartões de Para quem. */}
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2 sm:gap-4">
+            {tratamento.manifestacoes.map((item, i) => (
+              <Reveal
+                as="li"
+                key={item.name}
+                delay={i * 70}
+                className="flex h-full flex-col rounded-t-[1.75rem] rounded-b-[0.9rem] bg-neve px-6 py-6 lg:px-7 lg:py-7"
+              >
+                <div className="flex items-start gap-3">
+                  <span
+                    className="mt-1.5 block size-3 shrink-0 rounded-full"
+                    style={{ background: manifestacaoColors[i % manifestacaoColors.length] }}
+                    aria-hidden
+                  />
+                  <span className="text-[1.02rem] leading-snug font-medium">{item.name}</span>
+                </div>
+                <p className="mt-3 text-[0.98rem] leading-[1.7]">{item.text}</p>
+              </Reveal>
+            ))}
+          </ul>
         </Section>
 
         {/* ——— Para quem é o atendimento ——— */}
@@ -296,14 +352,14 @@ export default function App() {
         {/* ——— Como funciona ——— */}
         <Section id="como-funciona" className="lg:pt-6">
           <SectionHead title={como.title} />
-          <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             {como.steps.map((s, i) => (
               <Reveal as="li" key={s.title} delay={i * 90}>
                 <span className="font-display text-5xl leading-none text-oliva italic" aria-hidden>
                   {i + 1}
                 </span>
                 <h3 className="mt-3 font-display text-2xl leading-tight font-medium">{s.title}</h3>
-                <p className="mt-2 max-w-[16rem] text-[0.98rem] leading-[1.7]">{s.text}</p>
+                <p className="mt-2 text-[0.98rem] leading-[1.7]">{s.text}</p>
               </Reveal>
             ))}
           </ol>
@@ -403,6 +459,9 @@ export default function App() {
               </Reveal>
               <Reveal delay={140} className="mx-auto mt-7 flex max-w-xs flex-col gap-3 lg:mx-0">
                 <WhatsAppCta className="w-full" />
+                <LinkButton href={links.email} icon={<EmailIcon />} external={false}>
+                  E-mail
+                </LinkButton>
                 <LinkButton href={links.instagram} icon={<InstagramIcon />}>
                   Instagram
                 </LinkButton>
@@ -431,6 +490,9 @@ export default function App() {
               </TextLink>
               <TextLink href={links.whatsapp} icon={<WhatsAppIcon />} className="border-baunilha/50 hover:border-baunilha focus-visible:ring-baunilha focus-visible:ring-offset-ameixa">
                 WhatsApp
+              </TextLink>
+              <TextLink href={links.email} icon={<EmailIcon />} external={false} className="border-baunilha/50 hover:border-baunilha focus-visible:ring-baunilha focus-visible:ring-offset-ameixa">
+                E-mail
               </TextLink>
             </div>
           </div>

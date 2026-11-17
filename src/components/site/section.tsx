@@ -76,12 +76,12 @@ export function TextLink({
   icon,
   children,
   className,
+  external = true,
   ...props
-}: ComponentProps<"a"> & { icon?: ReactNode }) {
+}: ComponentProps<"a"> & { icon?: ReactNode; external?: boolean }) {
   return (
     <a
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(external ? { target: "_blank" as const, rel: "noopener noreferrer" } : {})}
       className={cn(
         "inline-flex items-center gap-2 border-b border-terracota/70 pb-0.5 text-[0.95rem] transition-colors hover:border-ameixa",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ameixa focus-visible:ring-offset-2 focus-visible:ring-offset-neve",
@@ -91,7 +91,7 @@ export function TextLink({
     >
       {icon ? <span className="shrink-0 [&>svg]:size-[1rem]">{icon}</span> : null}
       {children}
-      <span className="sr-only"> (abre em nova aba)</span>
+      {external ? <span className="sr-only"> (abre em nova aba)</span> : null}
     </a>
   )
 }

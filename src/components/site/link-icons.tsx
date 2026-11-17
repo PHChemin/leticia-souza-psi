@@ -10,6 +10,15 @@ const stroke = {
   strokeLinejoin: "round",
 } as const
 
+export function EmailIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...stroke}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 7l9 7 9-7" />
+    </svg>
+  )
+}
+
 export function InstagramIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden {...stroke}>
