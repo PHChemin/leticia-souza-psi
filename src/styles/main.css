@@ -489,6 +489,42 @@
   mask-image: linear-gradient(to top, #000, transparent);
 }
 
+/* Laço aberto: a linha se desenha da esquerda para a direita e a luz chega por último. */
+.open-loop-line {
+  clip-path: inset(-10% 100% -10% -10%);
+}
+
+.open-loop-light {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.is-visible .open-loop-line {
+  animation: open-loop-draw 2.6s cubic-bezier(0.45, 0, 0.2, 1) 0.4s forwards;
+}
+
+.is-visible .open-loop-light {
+  animation: open-loop-light 1.2s cubic-bezier(0.22, 0.8, 0.24, 1) 2.6s forwards;
+}
+
+@keyframes open-loop-draw {
+  to {
+    clip-path: inset(-10% -10% -10% -10%);
+  }
+}
+
+@keyframes open-loop-light {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Painéis de cor: cantos macios (o arredondado vem da classe no componente). */
 .band {
   background-color: var(--band);
@@ -537,5 +573,20 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* O traço nasce escondido e o ponto espera o delay. Sem animação, os dois ficam no estado final. */
+  .open-loop-line,
+  .open-loop-light {
+    animation: none !important;
+  }
+
+  .open-loop-line {
+    clip-path: none;
+  }
+
+  .open-loop-light {
+    opacity: 1;
+    transform: none;
   }
 }

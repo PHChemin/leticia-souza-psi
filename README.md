@@ -8,17 +8,16 @@ One-page institucional da psicóloga clínica **Letícia Souza** (CRP 06/229667)
 
 ## Pendências
 
-- Textos das nove seções (lista em `docs/PRD.md`).
-- Validar com a cliente a versão alpha (animação do símbolo no hero, faixas de cor, fotos escolhidas).
-- E-mail e link do artigo.
+- Validar com a cliente a versão com os textos dela.
+- Link do artigo (ainda sem URL).
 
 ## Onde mexer
 
 | O quê | Onde |
 | --- | --- |
-| Textos (provisórios) | `src/content.ts` |
+| Textos | `src/content.ts` |
 | Estrutura das seções | `src/App.tsx` |
-| Links de contato (WhatsApp, Instagram, Lattes) | `src/lib/links.ts` |
+| Links de contato (WhatsApp, e-mail, Instagram, Lattes) | `src/lib/links.ts` |
 | Cores, fontes e animações | `src/styles/main.css` |
 | Título, descrição e preview de compartilhamento | `index.html` |
 | Imagem de preview (1200×630) | `public/og-image.png` |
