@@ -1,22 +1,30 @@
 import type { CSSProperties } from "react"
 
-import { GhostLeaf } from "@/components/site/ghost-leaf"
-import { FlowLines } from "@/components/site/flow-lines"
-import { GrowingMark } from "@/components/site/growing-mark"
-import { EmailIcon, InstagramIcon, LattesIcon, WhatsAppIcon } from "@/components/site/link-icons"
-import { LinkButton } from "@/components/site/link-button"
-import { OpenLoop } from "@/components/site/open-loop"
-import { Photo } from "@/components/site/photo"
-import { Reveal } from "@/components/site/reveal"
-import { Body, Section, SectionHead, TextLink } from "@/components/site/section"
-import { SiteHeader } from "@/components/site/site-header"
-import { WhatsAppCta } from "@/components/site/whatsapp-cta"
+import {
+  Body,
+  EmailIcon,
+  FlowLines,
+  GhostLeaf,
+  GrowingMark,
+  InstagramIcon,
+  LattesIcon,
+  LinkButton,
+  OpenLoop,
+  Photo,
+  Reveal,
+  Section,
+  SectionHead,
+  SiteHeader,
+  TextLink,
+  WhatsAppCta,
+  WhatsAppIcon,
+} from "@/components/site"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui"
 import {
   abordagem,
   como,
