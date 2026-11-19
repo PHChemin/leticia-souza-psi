@@ -82,7 +82,7 @@ export const tratamento = {
   title: "Tratamento para TOC",
   paragraphs: [
     "Sabemos quantos estigmas e quantas ideias errôneas permeiam o Transtorno Obsessivo-Compulsivo (TOC), que pode se tornar extremamente incapacitante para quem o vivencia.",
-    "Aqui, estabelecemos um ambiente sem julgamentos, com acolhimento e ciência. O tratamento se dá de maneira individualizada, compreendendo a maneira que seu TOC se manifesta. Construiremos estratégias para enfrentar os medos, com muito respeito aos seus limites e identificando suas potências no processo.",
+    "Aqui, estabelecemos um ambiente sem julgamentos, com empatia e ciência. O tratamento se dá de maneira individualizada, compreendendo a maneira que seu TOC se manifesta. Construiremos estratégias para enfrentar os medos, com muito respeito aos seus limites e identificando suas potências no processo.",
   ],
   manifestacoesTitle: "Como o TOC pode se manifestar?",
   manifestacoes: [
@@ -96,7 +96,7 @@ export const tratamento = {
     },
     {
       name: "Pensamentos intrusivos e obsessões de conteúdo agressivo ou sexual",
-      text: "Pensamentos, imagens ou impulsos que não condizem com valores pessoais e que provocam sofrimento e medo.",
+      text: "Pensamentos, imagens, palavras ou ideias que não condizem com valores pessoais e que aparecem com frequência, levando a sofrimento e medos.",
     },
     {
       name: "Culpa intensa e medo de causar danos",
@@ -132,7 +132,7 @@ export const paraQuem = {
       name: "Idosos",
       color: "var(--color-terracota)",
       tint: 30,
-      text: "O envelhecimento é uma fase da vida marcada por novos desafios. Ao longo desse período, podem surgir novos desafios relacionados à saúde, às relações familiares e às mudanças na rotina. Também abrem-se novas possibilidades de construção de sentidos. O acompanhamento psicológico busca valorizar sua história, respeitar sua singularidade e reconhecer tudo o que se torna possível para si nesse momento.",
+      text: "O envelhecimento é uma fase marcada por novos desafios, sejam eles relacionados à saúde, às relações familiares e até a mudanças na rotina. Também abrem-se novas possibilidades de construção de sentidos. O acompanhamento psicológico olhará para suas potencialidades e dificuldades, valorizando sua história e oferecendo suporte em todo processo terapêutico.",
     },
   ],
 };
@@ -142,15 +142,15 @@ export const como = {
   steps: [
     {
       title: "Primeiro contato",
-      text: "Você entra em contato comigo através do WhatsApp ou e-mail e eu tiro todas as suas dúvidas sobre as sessões. Conversamos sobre expectativas acerca do atendimento, valores e disponibilidade de horários.",
+      text: "Você entra em contato comigo através do WhatsApp ou e-mail e eu tiro todas as suas dúvidas sobre as sessões. Conversamos sobre expectativas acerca do atendimento, valores e disponibilidade de horários e agendamos sua sessão.",
     },
     {
       title: "Preenchimento de formulário",
-      text: "No formulário, você responde com dados sobre você e formaliza os horários possíveis. Com essas respostas, organizo o nosso contrato.",
+      text: "Após o primeiro contato, eu envio um formulário para que você responda com dados sobre você e para que os horários sejam formalizados. Com essas respostas, organizo nosso contrato.",
     },
     {
       title: "Primeira sessão e acompanhamento",
-      text: "A primeira sessão é um momento em que nos conhecemos e você me conta a sua demanda. Detalhamos também a frequência das sessões. Após a primeira sessão, assinamos o contrato e damos continuidade aos atendimentos.",
+      text: "A primeira sessão é um momento em que nos conhecemos e você me conta a sua demanda de forma detalhada. Detalhamos também a frequência das sessões.",
     },
   ],
 };
@@ -158,7 +158,7 @@ export const como = {
 export const online = {
   title: "Atendimento online",
   paragraph:
-    "Os atendimentos online funcionam de forma semelhante ao atendimento presencial. Combinamos um horário que fica melhor e, próximo do horário da sessão, te envio o link para a chamada. Não é necessário ter câmera e microfones profissionais, o que é realmente preciso é que você consiga me ver e ouvir e eu consiga te ver e ouvir, sendo algo possível para ambas(os).",
+    "Os atendimentos online funcionam de forma semelhante ao atendimento presencial. Definimos o melhor horário e, com 10 minutos de antecedência, eu envio o link para a chamada. Não é necessário ter câmera e microfones profissionais, o que é realmente preciso é que consigamos interagir de forma compreensível para ambas(os).",
   facts: [
     { label: "Plataforma", value: "Google Meet" },
     { label: "Duração da sessão", value: "50 minutos a 1 hora" },
