@@ -105,7 +105,7 @@ export default function App() {
           />
         </div>
 
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-6 pt-4 pb-14 text-center lg:items-start lg:px-10 lg:pr-[48%] lg:pt-24 lg:pb-20 lg:text-left">
+        <div className="relative z-30 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-6 pt-4 pb-14 text-center lg:items-start lg:px-10 lg:pr-[48%] lg:pt-24 lg:pb-20 lg:text-left">
           <h1
             className="rise font-display text-[clamp(2.75rem,12.4vw,4.75rem)] leading-[0.95] font-medium tracking-[-0.025em] whitespace-nowrap lg:text-[clamp(4rem,6.6vw,7rem)]"
             style={step(1)}
